@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aidijing.iml" filepath="$PROJECT_DIR$/aidijing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidijing-basic-config/aidijing-basic-config.iml" filepath="$PROJECT_DIR$/aidijing-basic-config/aidijing-basic-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidijing-common/aidijing-common.iml" filepath="$PROJECT_DIR$/aidijing-common/aidijing-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidijing-dao/aidijing-dao.iml" filepath="$PROJECT_DIR$/aidijing-dao/aidijing-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidijing-parent/aidijing-parent.iml" filepath="$PROJECT_DIR$/aidijing-parent/aidijing-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidijing-restful-client/aidijing-restful-client.iml" filepath="$PROJECT_DIR$/aidijing-restful-client/aidijing-restful-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidijing-service/aidijing-service.iml" filepath="$PROJECT_DIR$/aidijing-service/aidijing-service.iml" />
+    </modules>
+  </component>
+</project>

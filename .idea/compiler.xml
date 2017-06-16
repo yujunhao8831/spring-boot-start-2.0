@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="aidijing-basic-config" />
+        <module name="aidijing-common" />
+        <module name="aidijing-dao" />
+        <module name="aidijing-eureka-user-client" />
+        <module name="aidijing-restful-client" />
+        <module name="aidijing-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="aidijing" target="1.8" />
+      <module name="aidijing-basic-config" target="1.8" />
+      <module name="aidijing-common" target="1.8" />
+      <module name="aidijing-dao" target="1.8" />
+      <module name="aidijing-parent" target="1.8" />
+      <module name="aidijing-restful-client" target="1.8" />
+      <module name="aidijing-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

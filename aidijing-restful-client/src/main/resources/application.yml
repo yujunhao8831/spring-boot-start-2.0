@@ -1,0 +1,46 @@
+spring:
+  # 多环境配置文件
+  profiles:
+    active: dev
+# session共享    
+  session:
+    storeType: redis
+# @ResponseBody
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+# 缓存
+  cache:
+    type: redis
+# AOP
+  aop:
+    proxy-target-class: true
+    auto: true
+  
+# 分页 page helper
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+# 压缩,这个属性样板打开了压缩选项，这样稍后应用到JSON正文的压缩就有保证了。
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+# jwt 配置
+jwt:
+  # header中key,以改值为key在header中获取 request.getHeader('key')
+  header: Authorization
+  # 签名密钥
+  secret: aidijing
+  # 过期时间,单位:秒
+  expiration: 3600
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+
+    
+    
+
+
