@@ -33,6 +33,7 @@ docker运行命令 : docker run -p 8080:8080 -t com.aidijing/aidijing-restful-cl
  + Spring 
  + Spring MVC 
  + Spring Session
+ + Spring Security
  + Spring Cache
  + Mybatis Plus 
  + Redis 
@@ -40,6 +41,7 @@ docker运行命令 : docker run -p 8080:8080 -t com.aidijing/aidijing-restful-cl
  + Pagehelper
  + Druid
  + Log4j2
+ + JWT(JSON Web Tokens)
 
 项目包含了
  + 分布式锁
@@ -56,6 +58,9 @@ docker运行命令 : docker run -p 8080:8080 -t com.aidijing/aidijing-restful-cl
  + 注入攻击过滤器
  + 多环境配置
  + 基本工具类
+ + jwt认证
+ + Spring Security基础权限管理
+ 
  
 要求 : 
  + JDK 1.8 
@@ -93,4 +98,3 @@ docker运行命令 : docker run -p 8080:8080 -t com.aidijing/aidijing-restful-cl
 + 控制器,发布http restful接口
 
 
-#### 后续完成安全控制
