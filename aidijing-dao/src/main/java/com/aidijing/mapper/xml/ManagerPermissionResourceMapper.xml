@@ -6,6 +6,7 @@
 	<resultMap id="BaseResultMap" type="com.aidijing.domain.ManagerPermissionResource">
 		<id column="id" property="id" />
 		<result column="parent_id" property="parentId" />
+		<result column="resource_depth" property="resourceDepth" />
 		<result column="permission_sort" property="permissionSort" />
 		<result column="permission_name" property="permissionName" />
 		<result column="resource_class" property="resourceClass" />

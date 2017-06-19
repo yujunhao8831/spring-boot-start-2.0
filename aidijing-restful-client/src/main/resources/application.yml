@@ -39,7 +39,9 @@ jwt:
     authentication:
       path: auth
       refresh: refresh
-
+# mybatis 枚举处理器包位置
+mybatis:
+  type-handlers-package: com.aidijing.handler
     
     
 

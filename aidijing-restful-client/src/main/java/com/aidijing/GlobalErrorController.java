@@ -5,6 +5,7 @@ import com.aidijing.common.exception.DaoException;
 import com.aidijing.common.exception.ServiceException;
 import com.aidijing.common.util.LogUtils;
 import org.springframework.dao.DataAccessException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -18,6 +19,14 @@ import java.sql.SQLException;
 public class GlobalErrorController {
 
 
+    @ExceptionHandler( AuthenticationException.class )
+    public ResponseEntity serviceErrorHandler ( AuthenticationException e ) {
+        if ( LogUtils.getLogger().isErrorEnabled() ) {
+            LogUtils.getLogger().error( "error", e );
+        }
+        return ResponseEntity.unauthorized();
+    }
+    
     @ExceptionHandler( ServiceException.class )
     public ResponseEntity serviceErrorHandler ( ServiceException e ) {
         if ( LogUtils.getLogger().isErrorEnabled() ) {

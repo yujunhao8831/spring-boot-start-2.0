@@ -3,6 +3,7 @@ package com.aidijing.config;
 import com.aidijing.common.GlobalConstant;
 import com.aidijing.common.filter.RequestLoggingFilter;
 import com.aidijing.common.util.JsonUtils;
+import com.aidijing.permission.AdminPermissionInterceptor;
 import com.github.pagehelper.PageRowBounds;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.boot.web.servlet.ErrorPage;
@@ -122,6 +123,7 @@ public class SpringConfig extends WebMvcConfigurerAdapter implements ErrorPageRe
      */
     @Override
     public void addInterceptors ( InterceptorRegistry registry ) {
+        registry.addInterceptor( new AdminPermissionInterceptor() ).addPathPatterns( "/**" );
     }
 
 

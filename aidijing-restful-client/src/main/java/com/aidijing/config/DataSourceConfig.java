@@ -65,6 +65,7 @@ public class DataSourceConfig {
         MybatisSqlSessionFactoryBean mybatisPlus = new MybatisSqlSessionFactoryBean();
         mybatisPlus.setDataSource( dataSource() );
         mybatisPlus.setVfs( SpringBootVFS.class );
+        
         if ( StringUtils.hasText( this.properties.getConfigLocation() ) ) {
             mybatisPlus.setConfigLocation( this.resourceLoader.getResource( this.properties.getConfigLocation() ) );
         }

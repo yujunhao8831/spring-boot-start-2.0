@@ -29,14 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <p>
- * 代码生成器演示
- * </p>
- *
- * @author hubin
- * @date 2016-12-01
- */
 public class MysqlGenerator {
 
     /**
@@ -149,7 +141,7 @@ public class MysqlGenerator {
          tc.setController( "templates/controller.java.vm" );
          tc.setService( "templates/service.java.vm" );
          tc.setServiceImpl( "templates/serviceImpl.java.vm" );
-
+        
         // 自定义模板配置，模板可以参考源码 /mybatis-plus/src/main/resources/template 使用 copy
         // 至您项目 src/main/resources/template 目录下，模板名称也可自定义如下配置：
         // TemplateConfig tc = new TemplateConfig();
