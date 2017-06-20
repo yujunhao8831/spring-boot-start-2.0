@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  * </p>
  *
  * @author 披荆斩棘
- * @since 2017-06-15
+ * @since 2017-06-19
  */
 public interface SystemConfigMapper extends BaseMapper<SystemConfig> {
 

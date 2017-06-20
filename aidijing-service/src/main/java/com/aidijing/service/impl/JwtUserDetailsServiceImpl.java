@@ -1,10 +1,10 @@
 package com.aidijing.service.impl;
 
-import com.aidijing.domain.ManagerAdminUser;
-import com.aidijing.domain.ManagerRole;
+import com.aidijing.domain.Role;
+import com.aidijing.domain.User;
 import com.aidijing.model.JwtUser;
-import com.aidijing.service.ManagerAdminUserService;
-import com.aidijing.service.ManagerRoleService;
+import com.aidijing.service.RoleService;
+import com.aidijing.service.UserService;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -22,13 +22,13 @@ import java.util.stream.Collectors;
 public class JwtUserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private ManagerAdminUserService managerAdminUserService;
+    private UserService userService;
     @Autowired
-    private ManagerRoleService      managerRoleService;
+    private RoleService roleService;
 
     @Override
     public UserDetails loadUserByUsername ( String username ) throws UsernameNotFoundException {
-        ManagerAdminUser user = managerAdminUserService.findByUsername( username );
+        User user = userService.findByUsername( username );
         if ( user == null ) {
             throw new UsernameNotFoundException( String.format( "该'%s'用户名不存在.", username ) );
         } else {
@@ -45,7 +45,7 @@ public class JwtUserDetailsServiceImpl implements UserDetailsService {
     }
 
     private List< GrantedAuthority > mapToGrantedAuthorities ( Long userId ) {
-        List< ManagerRole > roles = managerRoleService.getByUserId( userId );
+        List< Role > roles = roleService.getByUserId( userId );
         if ( CollectionUtils.isEmpty( roles ) ) {
             return null;
         }

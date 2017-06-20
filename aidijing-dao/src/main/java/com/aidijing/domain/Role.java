@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 系统配置表(MYISAM引擎)
+ * 后台管理角色表
  * </p>
  *
  * @author 披荆斩棘
@@ -21,8 +21,8 @@ import java.util.Date;
  */
 @Data
 @Accessors(chain = true)
-@TableName("system_config")
-public class SystemConfig extends Model<SystemConfig> {
+@TableName("manager_role")
+public class Role extends Model<Role> {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,20 +32,19 @@ public class SystemConfig extends Model<SystemConfig> {
 	@TableId(value="id", type= IdType.AUTO)
 	private  Long  id;
     /**
-     * key
+     * 角色名称
      */
-	@TableField("config_key")
-	private  String  configKey;
+	@TableField("role_name")
+	private  String  roleName;
     /**
-     * value
+     * 角色名称core
      */
-	@TableField("config_value")
-	private  String  configValue;
+	@TableField("role_name_code")
+	private  String  roleNameCode;
     /**
-     * 说明
+     * 描述
      */
-	@TableField("config_description")
-	private  String  configDescription;
+	private  String  description;
     /**
      * 创建时间
      */

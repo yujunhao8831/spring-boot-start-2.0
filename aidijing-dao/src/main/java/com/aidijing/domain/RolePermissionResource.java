@@ -9,11 +9,10 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
- * 系统配置表(MYISAM引擎)
+ * 后台管理角色资源中间表
  * </p>
  *
  * @author 披荆斩棘
@@ -21,8 +20,8 @@ import java.util.Date;
  */
 @Data
 @Accessors(chain = true)
-@TableName("system_config")
-public class SystemConfig extends Model<SystemConfig> {
+@TableName("manager_role_permission_resource")
+public class RolePermissionResource extends Model<RolePermissionResource> {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,34 +31,15 @@ public class SystemConfig extends Model<SystemConfig> {
 	@TableId(value="id", type= IdType.AUTO)
 	private  Long  id;
     /**
-     * key
+     * 后台管理角色_id
      */
-	@TableField("config_key")
-	private  String  configKey;
+	@TableField("role_id")
+	private  Long  roleId;
     /**
-     * value
+     * 后台管理权限资源_id
      */
-	@TableField("config_value")
-	private  String  configValue;
-    /**
-     * 说明
-     */
-	@TableField("config_description")
-	private  String  configDescription;
-    /**
-     * 创建时间
-     */
-	@TableField("create_time")
-	private  Date  createTime;
-    /**
-     * 修改时间
-     */
-	@TableField("update_time")
-	private  Date  updateTime;
-    /**
-     * 备注
-     */
-	private  String  remark;
+	@TableField("permission_resource_id")
+	private  Long  permissionResourceId;
 
 
 	@Override

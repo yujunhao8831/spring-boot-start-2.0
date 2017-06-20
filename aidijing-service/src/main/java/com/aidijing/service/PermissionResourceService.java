@@ -1,19 +1,19 @@
 package com.aidijing.service;
 
-import com.aidijing.domain.SystemConfig;
+import com.aidijing.domain.PermissionResource;
 import com.baomidou.mybatisplus.service.IService;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.PageRowBounds;
 
 /**
  * <p>
- * 系统配置表(MYISAM引擎) 服务类
+ * 后台管理权限资源表 服务类
  * </p>
  *
  * @author 披荆斩棘
  * @since 2017-06-19
  */
-public interface SystemConfigService extends IService<SystemConfig> {
+public interface PermissionResourceService extends IService<PermissionResource> {
     
     /**
      * 默认分页(PageHelper分页)

@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 系统配置表(MYISAM引擎)
+ * 后台管理用户
  * </p>
  *
  * @author 披荆斩棘
@@ -21,8 +21,8 @@ import java.util.Date;
  */
 @Data
 @Accessors(chain = true)
-@TableName("system_config")
-public class SystemConfig extends Model<SystemConfig> {
+@TableName("manager_user")
+public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,20 +32,41 @@ public class SystemConfig extends Model<SystemConfig> {
 	@TableId(value="id", type= IdType.AUTO)
 	private  Long  id;
     /**
-     * key
+     * 用户名(登录名称)
      */
-	@TableField("config_key")
-	private  String  configKey;
+	private  String  username;
     /**
-     * value
+     * 密码
      */
-	@TableField("config_value")
-	private  String  configValue;
+	private  String  password;
     /**
-     * 说明
+     * 昵称
      */
-	@TableField("config_description")
-	private  String  configDescription;
+	@TableField("nick_name")
+	private  String  nickName;
+    /**
+     * 真实姓名
+     */
+	@TableField("real_name")
+	private  String  realName;
+    /**
+     * 电子邮箱
+     */
+	private  String  email;
+    /**
+     * 手机号码
+     */
+	private  String  phone;
+    /**
+     * 密码最后重置(修改)日期
+     */
+	@TableField("last_password_reset_date")
+	private  Date  lastPasswordResetDate;
+    /**
+     * 创建人
+     */
+	@TableField("create_manager_admin_user_id")
+	private  Long  createManagerAdminUserId;
     /**
      * 创建时间
      */
@@ -56,6 +77,11 @@ public class SystemConfig extends Model<SystemConfig> {
      */
 	@TableField("update_time")
 	private  Date  updateTime;
+    /**
+     * 账户状态(1:激活,0:锁定)
+     */
+	@TableField("is_enabled")
+	private  boolean  enabled;
     /**
      * 备注
      */

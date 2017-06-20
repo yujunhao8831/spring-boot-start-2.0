@@ -1,7 +1,7 @@
 package com.aidijing.controller.security;
 
 import com.aidijing.common.ResponseEntity;
-import com.aidijing.domain.ManagerAdminUser;
+import com.aidijing.domain.User;
 import com.aidijing.model.JwtUser;
 import com.aidijing.security.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class AuthenticationController {
      * @throws AuthenticationException
      */
     @PostMapping( value = "${jwt.route.authentication.path}" )
-    public ResponseEntity createAuthenticationToken ( @RequestBody ManagerAdminUser user,
+    public ResponseEntity createAuthenticationToken ( @RequestBody User user,
                                                       Device device ) throws AuthenticationException {
         // 执行安全
         final Authentication authentication = authenticationManager.authenticate(
