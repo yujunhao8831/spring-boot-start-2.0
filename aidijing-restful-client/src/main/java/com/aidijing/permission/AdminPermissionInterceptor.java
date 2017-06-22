@@ -25,7 +25,7 @@ public class AdminPermissionInterceptor extends HandlerInterceptorAdapter {
             return false;
         }
         final HandlerMethod handlerMethod = ( HandlerMethod ) handler;
-
+        // TODO: 2017/6/22  
         return true;
 
 
